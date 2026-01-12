@@ -40,6 +40,11 @@ function pickImageUrlFromChatCompletion(completion: any) {
 }
 
 export async function POST(req: Request) {
+  const contentType = req.headers.get("content-type") || ""
+  if (!contentType.toLowerCase().includes("multipart/form-data")) {
+    return Response.json<ErrorBody>({ error: "请求体不是有效的 multipart/form-data。" }, { status: 400 })
+  }
+
   const apiKey = process.env.OPENROUTER_API_KEY || process.env.OPENAI_API_KEY
   if (!apiKey) {
     return Response.json<ErrorBody>(

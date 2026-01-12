@@ -4,12 +4,14 @@ import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
+import { AuthHeader } from "@/components/auth-header"
+
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "智能香蕉编辑器 - AI图片编辑工具",
-  description: "使用AI技术快速编辑图片，支持自然语言描述，智能识别和处理",
+  title: "智能图片编辑器 - AI 图片编辑工具",
+  description: "使用 AI 技术快速编辑图片，支持自然语言指令、智能识别与处理。",
   generator: "v0.app",
   icons: {
     icon: [
@@ -38,6 +40,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body className={`font-sans antialiased`}>
+        <AuthHeader />
         {children}
         <Analytics />
       </body>
