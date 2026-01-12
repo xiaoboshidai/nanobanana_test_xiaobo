@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
+import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import { GoogleSignInButton } from "@/components/google-sign-in-button"
@@ -46,7 +47,19 @@ export function AuthHeader() {
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
       <div className="container mx-auto max-w-6xl px-4 py-3 flex items-center justify-between gap-4">
-        <div className="font-semibold">智能图片编辑器</div>
+        <div className="flex items-center gap-4">
+          <Link href="/" className="font-semibold hover:opacity-80">
+            智能图片编辑器
+          </Link>
+          <nav className="hidden sm:flex items-center gap-3 text-sm text-muted-foreground">
+            <Link href="/pricing" className="hover:text-foreground">
+              定价
+            </Link>
+            <Link href="/#editor" className="hover:text-foreground">
+              编辑器
+            </Link>
+          </nav>
+        </div>
         <div className="flex items-center gap-3">
           {!isConfigured ? (
             <div className="text-sm text-muted-foreground">未配置 Supabase（请设置 `NEXT_PUBLIC_SUPABASE_URL/ANON_KEY`）</div>
