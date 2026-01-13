@@ -27,6 +27,7 @@
 可选：
 
 - `CREEM_TEST_MODE=true`（使用 Creem 测试环境 API；生产环境请移除或设为 `false`）
+  - 备注：如果未显式设置，本项目会根据 `CREEM_API_KEY` 是否包含 `test/sandbox` 等字样自动推断，并在本地开发环境默认使用测试环境。
 
 ## 2) 在 Creem 控制台配置产品与 Webhook
 
@@ -51,4 +52,3 @@
 下一步通常是：
 
 - 在 `onGrantAccess` / `onRevokeAccess` 中把订阅状态写入你的数据库（例如 Supabase 表），并用 `metadata.referenceId` 关联用户。
-
