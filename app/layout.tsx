@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
 import { AuthHeader } from "@/components/auth-header"
+import { SiteFooter } from "@/components/site-footer"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -42,6 +43,7 @@ export default function RootLayout({
       <body className={`font-sans antialiased`}>
         <AuthHeader />
         {children}
+        <SiteFooter />
         <Analytics />
       </body>
     </html>

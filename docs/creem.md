@@ -17,6 +17,7 @@
 
 - `CREEM_API_KEY`
 - `CREEM_WEBHOOK_SECRET`
+- `SUPABASE_SERVICE_ROLE_KEY`（用于在 Webhook 中把订阅状态写入 Supabase；仅服务端使用）
 - `NEXT_PUBLIC_CREEM_PRODUCT_STARTER_MONTHLY`
 - `NEXT_PUBLIC_CREEM_PRODUCT_STARTER_YEARLY`
 - `NEXT_PUBLIC_CREEM_PRODUCT_PRO_MONTHLY`
@@ -36,6 +37,13 @@
 3. 在 Creem Dashboard 配置 Webhook：
    - Endpoint：`https://<你的域名>/api/webhook/creem`
    - Secret：与 `CREEM_WEBHOOK_SECRET` 保持一致
+
+## 2.5) Supabase 表（用于订阅管理）
+
+为了在产品内提供“订阅管理/取消订阅”入口，需要把 Creem 的 customer/subscription 信息与 Supabase 用户绑定并持久化。
+
+1. 在 Supabase SQL Editor 执行：`docs/supabase-billing.sql`
+2. 在 Vercel 环境变量中设置 `SUPABASE_SERVICE_ROLE_KEY`（仅服务端，不要加 `NEXT_PUBLIC_`）
 
 ## 3) 成功回跳与验签
 

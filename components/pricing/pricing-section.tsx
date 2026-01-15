@@ -12,6 +12,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Switch } from "@/components/ui/switch"
 import { cn } from "@/lib/utils"
 import { getCreemProductId, type BillingInterval, type PlanKey } from "@/lib/creem/public-config"
+import { GoogleSignInButton } from "@/components/google-sign-in-button"
 import { createClient } from "@/lib/supabase/client"
 import { getSupabaseConfig } from "@/lib/supabase/env"
 
@@ -171,21 +172,26 @@ export function PricingSection() {
                 </CardContent>
                 <CardFooter className="flex flex-col gap-3">
                   {isConfigured ? (
-                    <CreemCheckout
-                      productId={productId!}
-                      successUrl={`/success?plan=${plan.key}&interval=${interval}`}
-                      referenceId={user?.id}
-                      customer={user?.email ? { email: user.email } : undefined}
-                      metadata={{
-                        plan: plan.key,
-                        interval,
-                        referenceId: user?.id ?? null,
-                      }}
-                    >
-                      <Button asChild className="w-full">
-                        <span>{user ? "立即订阅" : "登录后订阅"}</span>
-                      </Button>
-                    </CreemCheckout>
+                    user ? (
+                      <CreemCheckout
+                        productId={productId!}
+                        successUrl={`/success?plan=${plan.key}&interval=${interval}`}
+                        customer={user.email ? { email: user.email } : undefined}
+                        metadata={{
+                          plan: plan.key,
+                          interval,
+                          referenceId: user.id,
+                        }}
+                      >
+                        <Button asChild className="w-full">
+                          <span>立即订阅</span>
+                        </Button>
+                      </CreemCheckout>
+                    ) : (
+                      <div className="w-full">
+                        <GoogleSignInButton />
+                      </div>
+                    )
                   ) : (
                     <Button className="w-full" disabled>
                       未配置产品 ID（NEXT_PUBLIC_CREEM_PRODUCT_*）
@@ -193,7 +199,7 @@ export function PricingSection() {
                   )}
 
                   <p className="text-xs text-muted-foreground text-center">
-                    购买即表示你同意我们的服务条款与隐私政策。
+                    购买即表示你同意我们的服务条款与隐私政策，并了解退款政策与取消方式。
                   </p>
                 </CardFooter>
               </Card>
@@ -207,7 +213,7 @@ export function PricingSection() {
             <div className="text-sm text-muted-foreground">支持按量、私有化、团队席位与发票等需求。</div>
           </div>
           <Button asChild variant="outline">
-            <a href="mailto:support@example.com">联系销售</a>
+            <a href="mailto:libo86874@gmail.com">联系支持</a>
           </Button>
         </div>
       </div>

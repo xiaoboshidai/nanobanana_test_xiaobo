@@ -67,6 +67,9 @@ export function AuthHeader() {
             <div className="text-sm text-muted-foreground">正在读取登录状态…</div>
           ) : user ? (
             <>
+              <Button asChild variant="outline" className="hidden sm:inline-flex">
+                <Link href="/account/billing">订阅管理</Link>
+              </Button>
               <div className="text-sm text-muted-foreground max-w-[280px] truncate">{user.email ?? user.id}</div>
               <Button
                 type="button"

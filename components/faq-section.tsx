@@ -57,8 +57,8 @@ export function FAQSection() {
           <p className="text-lg mb-2">还有其他问题？</p>
           <p className="text-muted-foreground">
             欢迎通过{" "}
-            <a href="mailto:support@example.com" className="text-primary hover:underline">
-              support@example.com
+            <a href="mailto:libo86874@gmail.com" className="text-primary hover:underline">
+              libo86874@gmail.com
             </a>{" "}
             联系我们
           </p>
