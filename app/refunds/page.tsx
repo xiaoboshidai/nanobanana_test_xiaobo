@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const SUPPORT_EMAIL = "libo86874@gmail.com"
+const SUPPORT_EMAIL = "xiaobo@nanobananaxiaobotest.online"
 
 export const metadata = {
   title: "退款政策 - 智能图片编辑器",
@@ -52,4 +52,3 @@ export default function RefundsPage() {
     </main>
   )
 }
-

@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const SUPPORT_EMAIL = "libo86874@gmail.com"
+const SUPPORT_EMAIL = "xiaobo@nanobananaxiaobotest.online"
 
 export const metadata = {
   title: "服务条款 - 智能图片编辑器",
@@ -95,4 +95,3 @@ export default function TermsPage() {
     </main>
   )
 }
-

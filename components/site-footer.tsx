@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-const SUPPORT_EMAIL = "libo86874@gmail.com"
+const SUPPORT_EMAIL = "xiaobo@nanobananaxiaobotest.online"
 
 export function SiteFooter() {
   return (
@@ -62,4 +62,3 @@ export function SiteFooter() {
     </footer>
   )
 }
-

@@ -6,7 +6,7 @@ import { CreemPortalLink } from "@/components/creem/portal-link"
 import { createClient } from "@/lib/supabase/server"
 import { getBillingStateByUserId } from "@/lib/billing/billing-admin"
 
-const SUPPORT_EMAIL = "libo86874@gmail.com"
+const SUPPORT_EMAIL = "xiaobo@nanobananaxiaobotest.online"
 
 export const metadata = {
   title: "订阅管理 - 智能图片编辑器",

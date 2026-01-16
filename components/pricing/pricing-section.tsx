@@ -213,7 +213,7 @@ export function PricingSection() {
             <div className="text-sm text-muted-foreground">支持按量、私有化、团队席位与发票等需求。</div>
           </div>
           <Button asChild variant="outline">
-            <a href="mailto:libo86874@gmail.com">联系支持</a>
+            <a href="mailto:xiaobo@nanobananaxiaobotest.online">联系支持</a>
           </Button>
         </div>
       </div>
