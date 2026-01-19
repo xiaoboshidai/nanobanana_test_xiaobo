@@ -5,6 +5,7 @@ import Link from "next/link"
 
 import { Button } from "@/components/ui/button"
 import { GoogleSignInButton } from "@/components/google-sign-in-button"
+import { SubscriptionManageButton } from "@/components/subscription-manage-button"
 import { createClient } from "@/lib/supabase/client"
 import { getSupabaseConfig } from "@/lib/supabase/env"
 
@@ -67,9 +68,7 @@ export function AuthHeader() {
             <div className="text-sm text-muted-foreground">正在读取登录状态…</div>
           ) : user ? (
             <>
-              <Button asChild variant="outline" className="hidden sm:inline-flex">
-                <Link href="/account/billing">订阅管理</Link>
-              </Button>
+              <SubscriptionManageButton className="hidden sm:inline-flex" />
               <div className="text-sm text-muted-foreground max-w-[280px] truncate">{user.email ?? user.id}</div>
               <Button
                 type="button"
@@ -87,7 +86,10 @@ export function AuthHeader() {
               </Button>
             </>
           ) : (
-            <GoogleSignInButton />
+            <>
+              <SubscriptionManageButton className="hidden sm:inline-flex" />
+              <GoogleSignInButton />
+            </>
           )}
         </div>
       </div>

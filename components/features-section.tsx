@@ -5,22 +5,22 @@ const features = [
   {
     icon: MessageSquare,
     title: "自然语言编辑",
-    description: "使用简单的文字提示编辑图片。智能香蕉AI能理解复杂的指令，就像图片版的GPT",
+    description: "使用简单的文字提示编辑图片。支持更清晰的约束与多次迭代来逐步逼近预期。",
   },
   {
     icon: Users,
     title: "角色一致性",
-    description: "在编辑过程中完美保持角色细节。这个模型擅长保留面部和身份特征",
+    description: "在编辑过程中尽量保持角色特征与细节（效果会因素材与提示词而异）。",
   },
   {
     icon: Layers,
     title: "场景保留",
-    description: "将编辑无缝融合到原始背景中。比其他模型有更出色的场景融合效果",
+    description: "尽量让编辑结果与原始背景自然融合，适用于常见的场景替换与局部修改。",
   },
   {
     icon: Zap,
     title: "一键编辑",
-    description: "一次尝试就能获得完美结果。智能香蕉轻松解决一键图片编辑的挑战",
+    description: "提供一键编辑流程；你也可以通过补充细节与多次尝试来优化结果。",
   },
   {
     icon: Images,
@@ -30,7 +30,7 @@ const features = [
   {
     icon: Sparkles,
     title: "AI内容创作",
-    description: "创建一致的AI虚拟形象和UGC内容。完美适用于社交媒体和营销活动",
+    description: "用于创作一致的 AI 虚拟形象与 UGC 内容，适合社交媒体与营销素材制作。",
   },
 ]
 
@@ -41,7 +41,7 @@ export function FeaturesSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">核心功能</h2>
           <p className="text-xl text-muted-foreground text-balance">
-            为什么选择智能香蕉？智能香蕉是最先进的AI图片编辑器，通过自然语言理解革新照片编辑
+            自然语言驱动的图片编辑体验：上传图片、描述目标、迭代优化。
           </p>
         </div>
 
