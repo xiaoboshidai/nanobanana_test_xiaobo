@@ -93,6 +93,16 @@ export default async function BillingPage() {
               </Button>
             </div>
 
+            <div className="rounded-md border bg-muted/20 p-4 space-y-2">
+              <div className="font-medium">如何取消订阅</div>
+              <div className="text-muted-foreground">
+                1) 完成订阅后回到本页；2) 点击“管理订阅”进入客户门户；3) 在客户门户中选择取消订阅（Cancel subscription）。
+              </div>
+              <div className="text-muted-foreground">
+                如果本页没有出现“管理订阅”按钮（例如订阅尚未同步），请稍后刷新重试或联系支持邮箱。
+              </div>
+            </div>
+
             <div className="pt-3 text-muted-foreground">
               退款政策见{" "}
               <Link href="/refunds" className="text-primary hover:underline">

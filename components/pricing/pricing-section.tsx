@@ -199,7 +199,23 @@ export function PricingSection() {
                   )}
 
                   <p className="text-xs text-muted-foreground text-center">
-                    购买即表示你同意我们的服务条款与隐私政策，并了解退款政策与取消方式。
+                    购买即表示你同意{" "}
+                    <Link href="/terms" className="text-primary hover:underline">
+                      服务条款
+                    </Link>
+                    、{" "}
+                    <Link href="/privacy" className="text-primary hover:underline">
+                      隐私政策
+                    </Link>
+                    ，并了解{" "}
+                    <Link href="/refunds" className="text-primary hover:underline">
+                      退款政策
+                    </Link>
+                    。订阅后可在{" "}
+                    <Link href="/account/billing" className="text-primary hover:underline">
+                      订阅管理
+                    </Link>{" "}
+                    中进入客户门户取消订阅。
                   </p>
                 </CardFooter>
               </Card>
