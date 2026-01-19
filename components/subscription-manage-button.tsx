@@ -26,6 +26,7 @@ export function SubscriptionManageButton({ className }: { className?: string }) 
 
         const { data } = await supabase.auth.getUser()
         const user = data.user
+
         if (user) {
           router.push("/account/billing")
           return

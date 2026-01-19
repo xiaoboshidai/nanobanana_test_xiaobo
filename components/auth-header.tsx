@@ -61,11 +61,20 @@ export function AuthHeader() {
             </Link>
           </nav>
         </div>
+
         <div className="flex items-center gap-3">
           {!isConfigured ? (
-            <div className="text-sm text-muted-foreground">未配置 Supabase（请设置 `NEXT_PUBLIC_SUPABASE_URL/ANON_KEY`）</div>
+            <>
+              <SubscriptionManageButton />
+              <div className="text-sm text-muted-foreground">
+                未配置 Supabase（请设置 `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY`）
+              </div>
+            </>
           ) : isLoading ? (
-            <div className="text-sm text-muted-foreground">正在读取登录状态…</div>
+            <>
+              <SubscriptionManageButton />
+              <div className="text-sm text-muted-foreground">正在读取登录状态…</div>
+            </>
           ) : user ? (
             <>
               <SubscriptionManageButton />
@@ -96,3 +105,4 @@ export function AuthHeader() {
     </header>
   )
 }
+
