@@ -5,7 +5,7 @@ const reviews = [
   {
     name: "内测用户 A",
     role: "内容创作者",
-    content: "上手很快，适合做快速试验和灵感草图。",
+    content: "上手简单，适合做试验和灵感草图。",
   },
   {
     name: "内测用户 B",

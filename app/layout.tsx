@@ -12,7 +12,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "智能图片编辑器 - AI 图片编辑工具",
-  description: "使用 AI 技术快速编辑图片，支持自然语言指令、智能识别与处理。",
+  description: "使用 AI 技术编辑图片，支持自然语言指令、智能识别与处理。",
   generator: "v0.app",
   icons: {
     icon: [

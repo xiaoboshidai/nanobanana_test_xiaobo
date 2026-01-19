@@ -4,22 +4,22 @@ import { Zap } from "lucide-react"
 
 const showcaseItems = [
   {
-    title: "超快山景生成",
-    description: "快速生成风景氛围与构图变化，适合灵感探索。",
+    title: "山景生成",
+    description: "生成风景氛围与构图变化，适合灵感探索。",
     image: "/majestic-mountain-vista.png",
   },
   {
-    title: "即时花园创作",
+    title: "花园创作",
     description: "用于场景替换与细节增强，适配常见创作需求。",
     image: "/beautiful-garden.jpg",
   },
   {
-    title: "实时海滩合成",
-    description: "自然融合前景与背景元素，保持画面一致性。",
+    title: "海滩合成",
+    description: "融合前景与背景元素，获得更自然的画面效果。",
     image: "/tropical-beach-sunset.png",
   },
   {
-    title: "快速极光生成",
+    title: "极光生成",
     description: "支持风格变化与色彩调整，便于多版本对比。",
     image: "/aurora-borealis-night-sky.png",
   },
@@ -57,14 +57,13 @@ export function ShowcaseSection() {
         </div>
 
         <div className="text-center">
-          <p className="text-lg text-muted-foreground mb-6">亲自体验智能香蕉的强大功能</p>
+          <p className="text-lg text-muted-foreground mb-6">亲自体验智能香蕉的功能</p>
           <Button size="lg" className="gap-2" asChild>
-            <a href="#editor">
-              尝试智能香蕉编辑器 <span className="text-xl">🍌</span>
-            </a>
+            <a href="#editor">尝试智能香蕉编辑器</a>
           </Button>
         </div>
       </div>
     </section>
   )
 }
+

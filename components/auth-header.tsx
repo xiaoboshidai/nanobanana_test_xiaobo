@@ -68,7 +68,7 @@ export function AuthHeader() {
             <div className="text-sm text-muted-foreground">正在读取登录状态…</div>
           ) : user ? (
             <>
-              <SubscriptionManageButton className="hidden sm:inline-flex" />
+              <SubscriptionManageButton />
               <div className="text-sm text-muted-foreground max-w-[280px] truncate">{user.email ?? user.id}</div>
               <Button
                 type="button"
@@ -87,7 +87,7 @@ export function AuthHeader() {
             </>
           ) : (
             <>
-              <SubscriptionManageButton className="hidden sm:inline-flex" />
+              <SubscriptionManageButton />
               <GoogleSignInButton />
             </>
           )}
